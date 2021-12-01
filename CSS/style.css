@@ -571,10 +571,6 @@ body {
 .cta-form input::placeholder {
 	color: #aaa;
 }
-.cta-form select {
-}
-.cta-form button {
-}
 
 .cta *:focus {
 	/* never set outline as none */
