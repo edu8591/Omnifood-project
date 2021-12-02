@@ -84,7 +84,7 @@ body {
 	list-style: none;
 	display: flex;
 	align-items: center;
-	gap: 3.2rem;
+	gap: 4.8rem;
 }
 .main-nav-link:link,
 .main-nav-link:visited {
@@ -126,7 +126,7 @@ body {
 .hero {
 	max-width: 130rem;
 	margin: 0 auto;
-	padding: 0 3.2rem 0 3.2rem;
+	padding: 0 3.2rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 9.6rem;
@@ -278,6 +278,7 @@ body {
 .meal-content {
 	padding: 3.2rem 4.8rem 4.8rem 4.8rem;
 }
+
 .meal-tags {
 	margin-bottom: 1.2rem;
 	display: flex;
@@ -570,10 +571,6 @@ body {
 
 .cta-form input::placeholder {
 	color: #aaa;
-}
-.cta-form select {
-}
-.cta-form button {
 }
 
 .cta *:focus {
