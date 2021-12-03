@@ -237,6 +237,10 @@
 	.testimonials {
 		grid-template-columns: 1fr;
 	}
+	.gallery {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.2rem;
+	}
 }
 
 /*
