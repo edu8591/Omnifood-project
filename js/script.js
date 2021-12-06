@@ -33,7 +33,7 @@ checkFlexGap();
 
 const allLinks = document.querySelectorAll("a:link");
 
-allLinks.forEach(function (link) {
+allLinks.forEach((link) => {
 	link.addEventListener("click", (e) => {
 		e.preventDefault();
 		const href = link.getAttribute("href");
@@ -56,7 +56,26 @@ allLinks.forEach(function (link) {
 		}
 	});
 });
+const sectionHeroEl = document.querySelector(".section-hero");
+const observer = new IntersectionObserver(
+	(entries) => {
+		const ent = entries[0];
+		if (!ent.isIntersecting) {
+			document.body.classList.add("sticky");
+		}
 
+		if (ent.isIntersecting) {
+			document.body.classList.remove("sticky");
+		}
+	},
+	{
+		root: null,
+		threshold: 0,
+		rootMargin: "-80px",
+	}
+);
+
+observer.observe(sectionHeroEl);
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
 /*
