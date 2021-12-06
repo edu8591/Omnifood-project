@@ -51,6 +51,7 @@ html {
 	font-size: 62.5%;
 	/* I want font size of 10px, so 10px/16(default size) = 62.5% */
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 body {
