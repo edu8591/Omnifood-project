@@ -31,6 +31,32 @@ function checkFlexGap() {
 }
 checkFlexGap();
 
+const allLinks = document.querySelectorAll("a:link");
+
+allLinks.forEach(function (link) {
+	link.addEventListener("click", (e) => {
+		e.preventDefault();
+		const href = link.getAttribute("href");
+		// scroll back to top
+		if (href === "#") {
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth",
+			});
+		}
+		// scroll to other sections
+		if (href !== "#" && href.startsWith("#")) {
+			const sectionEl = document.querySelector(href);
+			sectionEl.scrollIntoView({ behavior: "smooth" });
+		}
+
+		// close mobile nav;
+		if (link.classList.contains("main-nav-link")) {
+			headerEl.classList.toggle("nav-open");
+		}
+	});
+});
+
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
 /*
