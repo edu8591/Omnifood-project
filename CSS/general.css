@@ -41,11 +41,6 @@ Paragraph default: 1.6 px
 /* General Reusable components */
 /****************************************/
 
-*:focus {
-	/* never set outline as none */
-	/* outline: none; */
-	box-shadow: 0 0 0 0.8rem #e67e22;
-}
 .container {
 	max-width: 120rem;
 	padding: 0 3.2rem;
